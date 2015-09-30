@@ -14,7 +14,7 @@ public class Method_Scope {
 		parameterMethod(1);
 		returnMethod();
 		overloadingMethod(1);
-		overloadingMethod("¹®ÀÚ¿­");
+		overloadingMethod("ë¬¸ìì—´");
 		firstMethod();
 		fx(1);
 		
@@ -24,55 +24,55 @@ public class Method_Scope {
 		
 		String instanceScope = new String();
 				
-		System.out.println("Áö¿ª º¯¼ö : " + localScope);
-		System.out.println("Àü¿ª º¯¼ö : " + method.areaScope);
-		System.out.println("½ºÅÂÆ½ º¯¼ö : " + staticScope);
-		System.out.println("ÀÎ½ºÅÏ½º º¯¼ö : " + instanceScope);
+		System.out.println("ì§€ì—­ ë³€ìˆ˜ : " + localScope);
+		System.out.println("ì „ì—­ ë³€ìˆ˜ : " + method.areaScope);
+		System.out.println("ìŠ¤íƒœí‹± ë³€ìˆ˜ : " + staticScope);
+		System.out.println("ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜ : " + instanceScope);
 		
 	}
 	
 	private static void startMethod() {
-		System.out.println("¸Ş¼Òµå¸¦ ½ÃÀÛÇÕ´Ï´Ù.");
+		System.out.println("ë©”ì†Œë“œë¥¼ ì‹œì‘í•©ë‹ˆë‹¤.");
 	}
 	
 	private static void parameterMethod(int i) {
-		System.out.println("¸Å°³º¯¼ö¸¦ ¹ŞÀº ¸Ş¼Òµå ÀÔ´Ï´Ù. "
-				+ "¸Å°³º¯¼ö´Â " + i + "ÀÔ´Ï´Ù.");
+		System.out.println("ë§¤ê°œë³€ìˆ˜ë¥¼ ë°›ì€ ë©”ì†Œë“œ ì…ë‹ˆë‹¤. "
+				+ "ë§¤ê°œë³€ìˆ˜ëŠ” " + i + "ì…ë‹ˆë‹¤.");
 	}
 	
 	private static int returnMethod() {
 		int i = 100;
-		System.out.println("°ªÀ» ¹İÈ¯ÇÏ´Â ¸Ş¼Òµå ÀÔ´Ï´Ù. "
-				+ "¹İÈ¯ °ªÀº " + i + "ÀÔ´Ï´Ù.");
+		System.out.println("ê°’ì„ ë°˜í™˜í•˜ëŠ” ë©”ì†Œë“œ ì…ë‹ˆë‹¤. "
+				+ "ë°˜í™˜ ê°’ì€ " + i + "ì…ë‹ˆë‹¤.");
 		return i;
 	}
 	
 	private static void overloadingMethod(int i) {
-		System.out.println("¿À¹ö·Îµù ÇÏ´Â ¸Ş¼Òµå ÀÔ´Ï´Ù. ¸Å°³º¯¼ö´Â " + i + "ÀÔ´Ï´Ù.");
+		System.out.println("ì˜¤ë²„ë¡œë”© í•˜ëŠ” ë©”ì†Œë“œ ì…ë‹ˆë‹¤. ë§¤ê°œë³€ìˆ˜ëŠ” " + i + "ì…ë‹ˆë‹¤.");
 	}
 	
 	private static void overloadingMethod(String i) {
-		System.out.println("¿À¹ö·Îµù ÇÏ´Â ¸Ş¼Òµå ÀÔ´Ï´Ù. ¸Å°³º¯¼ö´Â " + i + "ÀÔ´Ï´Ù.");
+		System.out.println("ì˜¤ë²„ë¡œë”© í•˜ëŠ” ë©”ì†Œë“œ ì…ë‹ˆë‹¤. ë§¤ê°œë³€ìˆ˜ëŠ” " + i + "ì…ë‹ˆë‹¤.");
 	}
 	
 	private static void firstMethod() {
-		System.out.println("Ã¹¹øÂ° ¸Ş¼Òµå ÀÔ´Ï´Ù. "
-				+ "µÎ¹øÂ° ¸Ş¼Òµå·Î ÀÌµ¿ÇÕ´Ï´Ù.");
+		System.out.println("ì²«ë²ˆì§¸ ë©”ì†Œë“œ ì…ë‹ˆë‹¤. "
+				+ "ë‘ë²ˆì§¸ ë©”ì†Œë“œë¡œ ì´ë™í•©ë‹ˆë‹¤.");
 		secondMethod();
 	}
 	
 	private static void secondMethod() {
-		System.out.println("µÎ¹øÂ° ¸Ş¼Òµå ÀÔ´Ï´Ù. ¼¼¹øÂ° ¸Ş¼Òµå·Î ÀÌµ¿ÇÕ´Ï´Ù.");
+		System.out.println("ë‘ë²ˆì§¸ ë©”ì†Œë“œ ì…ë‹ˆë‹¤. ì„¸ë²ˆì§¸ ë©”ì†Œë“œë¡œ ì´ë™í•©ë‹ˆë‹¤.");
 		thirdMethod("Hello");
 	}
 	
 	private static void thirdMethod(String text) {
-		System.out.println("¼¼¹ø¤Š ¸Ş¼Òµå ÀÔ´Ï´Ù. ¸Å°³º¯¼ö´Â " + text + "ÀÔ´Ï´Ù.");
+		System.out.println("ì„¸ë²ˆì¨° ë©”ì†Œë“œ ì…ë‹ˆë‹¤. ë§¤ê°œë³€ìˆ˜ëŠ” " + text + "ì…ë‹ˆë‹¤.");
 	}
 	
 	private static void fx(int i) {
 		int sum = i + 1;
-		System.out.println("ÇÕÀº = " + sum + "ÀÔ´Ï´Ù.");
+		System.out.println("í•©ì€ = " + sum + "ì…ë‹ˆë‹¤.");
 	}
 
 	

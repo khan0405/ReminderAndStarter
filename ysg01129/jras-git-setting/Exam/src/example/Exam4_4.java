@@ -27,7 +27,7 @@ public class Exam4_4 {
 			count++;
 		}
 		System.out.println();
-		System.out.println("°ª : " + sum + "\t\t È½¼ö : " + count);
+		System.out.println("ê°’ : " + sum + "\t\t íšŸìˆ˜ : " + count);
 	}
 	
 	private static void usePow() {
@@ -47,6 +47,6 @@ public class Exam4_4 {
 			number++;
 		}
 		System.out.println();
-		System.out.println("°ª : " + sum + "\t\t È½¼ö : " + count);		
+		System.out.println("ê°’ : " + sum + "\t\t íšŸìˆ˜ : " + count);		
 	}
 }

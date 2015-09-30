@@ -27,7 +27,7 @@ public class FitNumber extends JFrame implements KeyListener {
 	
 	private FitNumber() {
 		// TODO Auto-generated constructor stub
-		super("Á¤º¸°Ë»ö");
+		super("ì •ë³´ê²€ìƒ‰");
 		Container container = jframe.getContentPane();
 		
 		jtaResult.setEditable(false);
@@ -46,8 +46,8 @@ public class FitNumber extends JFrame implements KeyListener {
 			public void windowOpened(WindowEvent e) {
 				// TODO Auto-generated method stub
 				jtfInput.setFocusable(true);
-				jtaResult.append("¼ıÀÚ ¸ÂÃß±â °ÔÀÓÀ» ½ÃÀÛÇÏ°Ú½À´Ï´Ù. \r\n");
-				jtaResult.append(min + "°ú " + max + "»çÀÌÀÇ ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä. \r\n");
+				jtaResult.append("ìˆ«ì ë§ì¶”ê¸° ê²Œì„ì„ ì‹œì‘í•˜ê² ìŠµë‹ˆë‹¤. \r\n");
+				jtaResult.append(min + "ê³¼ " + max + "ì‚¬ì´ì˜ ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”. \r\n");
 			}
 			
 			@Override
@@ -116,16 +116,16 @@ public class FitNumber extends JFrame implements KeyListener {
 	
 	private void matching(int input) {
 		if(input == answer) {
-			jtaResult.append("Á¤´äÀÔ´Ï´Ù. \r\n");
-			jtaResult.append("½Ãµµ È½¼ö´Â " + count +"¹ø ÀÔ´Ï´Ù.");
+			jtaResult.append("ì •ë‹µì…ë‹ˆë‹¤. \r\n");
+			jtaResult.append("ì‹œë„ íšŸìˆ˜ëŠ” " + count +"ë²ˆ ì…ë‹ˆë‹¤.");
 		} else if(input < answer) {
-			jtaResult.append("´õ Å« ¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä. \r\n");
+			jtaResult.append("ë” í° ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”. \r\n");
 			min = input;
-			jtaResult.append(min + "°ú " + max + "»çÀÌÀÇ ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä. \r\n");
+			jtaResult.append(min + "ê³¼ " + max + "ì‚¬ì´ì˜ ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”. \r\n");
 		} else if(input > answer){
-			jtaResult.append("´õ ÀÛÀº ¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä. \r\n");
+			jtaResult.append("ë” ì‘ì€ ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”. \r\n");
 			max = input;
-			jtaResult.append(min + "°ú " + max + "»çÀÌÀÇ ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä. \r\n");
+			jtaResult.append(min + "ê³¼ " + max + "ì‚¬ì´ì˜ ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”. \r\n");
 		}
 	}
 	

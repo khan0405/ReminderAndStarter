@@ -29,17 +29,17 @@ public class Exam4_14 {
 		
 		do {
 			count++;
-			System.out.print("1°ú 100»çÀÌÀÇ °ªÀ» ÀÔ·ÂÇÏ¼¼¿ä : ");
+			System.out.print("1ê³¼ 100ì‚¬ì´ì˜ ê°’ì„ ì…ë ¥í•˜ì„¸ìš” : ");
 			input = s.nextInt();
 			
 			if(input == answer) {
-				System.out.println("¸ÂÃè½À´Ï´Ù.");
-				System.out.println("½ÃµµÈ½¼ö´Â " + count + "¹ø ÀÔ´Ï´Ù.");
+				System.out.println("ë§ì·„ìŠµë‹ˆë‹¤.");
+				System.out.println("ì‹œë„íšŸìˆ˜ëŠ” " + count + "ë²ˆ ì…ë‹ˆë‹¤.");
 				break;
 			} else if(input < answer) {
-				System.out.println("´õ Å« ¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+				System.out.println("ë” í° ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 			} else {
-				System.out.println("´õ ÀÛÀº ¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+				System.out.println("ë” ì‘ì€ ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 			}
 		} while(true);
 				
@@ -55,19 +55,19 @@ public class Exam4_14 {
 		Scanner s = new Scanner(System.in);
 		
 		while(true) {
-			System.out.print(min + "°ú " + max + "»çÀÌÀÇ °ªÀ» ÀÔ·ÂÇÏ¼¼¿ä : ");
+			System.out.print(min + "ê³¼ " + max + "ì‚¬ì´ì˜ ê°’ì„ ì…ë ¥í•˜ì„¸ìš” : ");
 			count++;
 			input = s.nextInt();
 			
 			if(input == answer) {
-				System.out.println("Á¤´äÀÔ´Ï´Ù.");
-				System.out.println("½Ãµµ È½¼ö´Â " + count + "¹ø ÀÔ´Ï´Ù.");
+				System.out.println("ì •ë‹µì…ë‹ˆë‹¤.");
+				System.out.println("ì‹œë„ íšŸìˆ˜ëŠ” " + count + "ë²ˆ ì…ë‹ˆë‹¤.");
 				break;
 			} else if(input < answer) {
-				System.out.println("´õ Å« ¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+				System.out.println("ë” í° ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 				min = input;
 			} else {
-				System.out.println("´õ ÀÛÀº¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+				System.out.println("ë” ì‘ì€ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 				max = input;
 			}
 			

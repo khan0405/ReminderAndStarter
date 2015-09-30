@@ -23,6 +23,6 @@ public class Exam4_3 {
 		}
 		
 		System.out.println();
-		System.out.println("°ª : " + sum);
+		System.out.println("ê°’ : " + sum);
 	}
 }
