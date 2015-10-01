@@ -12,7 +12,7 @@ public class OneToTenAccumulateSum {
 	private Integer totalAccumulateSum = 0;
 	
 	public void doAccumulateSum() {
-		OneToTenIterator oneToTenIterator = new OneToTenIterator();
+		OneToTenAccumulateIterator oneToTenIterator = new OneToTenAccumulateIterator();
 		Calculator calculator = new Calculator();
 		
 		while(oneToTenIterator.isIterate()) {
@@ -39,7 +39,7 @@ public class OneToTenAccumulateSum {
 		System.out.printf("Total accumulate sum is %d", totalAccumulateSum);
 	}
 	
-	class OneToTenIterator {
+	class OneToTenAccumulateIterator {
 		
 		private final Integer[] ONE_TO_TEN_NUMBER = new Integer[]{
 				1, 2, 3, 4, 5, 6, 7, 8, 9, 10
@@ -47,7 +47,7 @@ public class OneToTenAccumulateSum {
 		
 		private int nextIndex;
 		
-		public OneToTenIterator() {
+		public OneToTenAccumulateIterator() {
 			nextIndex = 0;
 		}
 		
