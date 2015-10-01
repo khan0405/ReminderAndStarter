@@ -57,7 +57,7 @@ public class OneToTenAccumulateSum {
 		
 		public Integer[] nextNumberUntilNow() {
 			Integer currentNumber = ONE_TO_TEN_NUMBER[nextIndex];
-			List<Integer> accumulateNumber = new ArrayList();
+			List<Integer> accumulateNumber = new ArrayList<>();
 			
 			accumulateUntil(currentNumber, accumulateNumber);
 			countUpNextIndex();
