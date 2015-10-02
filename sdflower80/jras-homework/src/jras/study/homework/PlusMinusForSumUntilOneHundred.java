@@ -67,11 +67,4 @@ public class PlusMinusForSumUntilOneHundred {
 			stillRunning = false;
 		}
 	}
-	
-	class PlusMinusCalculator {
-		public void sum(Integer num) {
-			Integer sum = 0;
-			
-		}
-	}
 }
