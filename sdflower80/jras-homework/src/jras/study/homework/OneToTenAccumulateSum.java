@@ -13,32 +13,23 @@ public class OneToTenAccumulateSum {
 	
 	public void doAccumulateSum() {
 		OneToTenAccumulateIterator oneToTenIterator = new OneToTenAccumulateIterator();
+		SystemOutNumberPrinter numberPrinter = new SystemOutNumberPrinter();
 		Calculator calculator = new Calculator();
 		
 		while(oneToTenIterator.isIterate()) {
 			Integer[] nextNumberUntilNow = oneToTenIterator.nextNumberUntilNow();
 			totalAccumulateSum += calculator.sum(nextNumberUntilNow);
 			
-			printUntiNumber(nextNumberUntilNow);
+			numberPrinter.printFormatArrayNumber("total is to be a %d => first to current number is ${array}\n",
+					nextNumberUntilNow, totalAccumulateSum);
 		}
 		
-		printTotal();
+		numberPrinter.printFormat("Total accumulate sum is %d", totalAccumulateSum);
 	}
 	
-	private void printUntiNumber(Integer[] nextNumberUntilNow) {
-		StringBuilder numberString = new StringBuilder();
-		for(Integer nextNumber : nextNumberUntilNow) {
-			numberString.append(nextNumber).append(", ");
-		}
-		numberString.delete(numberString.length() - 2, numberString.length());
-		
-		System.out.printf("total is to be a %d => first to current number is %s\n", totalAccumulateSum, numberString.toString());
-	}
-	
-	private void printTotal() {
-		System.out.printf("Total accumulate sum is %d", totalAccumulateSum);
-	}
-	
+	/***
+	 * 1 ~ 10 까지 순회시키는 이터레이터
+	 */
 	class OneToTenAccumulateIterator {
 		
 		private final Integer[] ONE_TO_TEN_NUMBER = new Integer[]{
@@ -76,6 +67,29 @@ public class OneToTenAccumulateSum {
 		}
 	}
 	
+	/***
+	 * 숫자 출력 프린터
+	 */
+	class SystemOutNumberPrinter {
+		public void printFormatArrayNumber(String formatMessage, Integer[] numberArray, Object... bindParameter) {
+			StringBuilder numberString = new StringBuilder();
+			for(Integer nextNumber : numberArray) {
+				numberString.append(nextNumber).append(", ");
+			}
+			numberString.delete(numberString.length() - 2, numberString.length());
+			
+			String arrayValueFormatMessage = formatMessage.replaceAll("\\$\\{array\\}", numberString.toString());
+			System.out.printf(arrayValueFormatMessage, bindParameter);
+		}
+		
+		public void printFormat(String prefix, Object... bindParameter) {
+			System.out.printf(prefix, bindParameter);
+		}
+	}
+	
+	/***
+	 * 덧셈 계산기
+	 */
 	class Calculator {
 		public Integer sum(Integer[] numbers) {
 			Integer sum = 0;
