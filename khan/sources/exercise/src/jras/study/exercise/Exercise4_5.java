@@ -25,15 +25,13 @@ public class Exercise4_5 {
 	 * while로 변경한 코드입니다.
 	 */
 	public static void convertExCode() {
-		int i = 0;
-		while(i <= 10) {
+		int i = -1;
+		while(++i <= 10) {
 			int j = 0;
-			while(j <= i) {
+			while(j++ <= i) {
 				System.out.print("*");
-				j++;
 			}
 			System.out.println();
-			i++;
 		}
 	}
 }
