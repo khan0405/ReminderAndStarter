@@ -17,34 +17,25 @@ public class Exercise4_3 {
 	public void doWork() {
 		int minNum = 1;
 		int maxNum = 10;
-		int result = calculate(minNum, maxNum);
-		System.out.println(String.format("%s부터 %s의 합은 %s입니다.", minNum, maxNum, result));
+		int result = calculate(minNum, maxNum, true);
+		System.out.println(String.format("%s부터 %s의 합은 %s 입니다.", minNum, maxNum, result));
 	}
 
 	/**
 	 * n+(n+(n+1))+(n+(n+1)+(n+2))+....+(n+(n+1)+(n+2)+...+maxValue)의 결과를 계산한다.
 	 * @param minNum 처음에 시작할 숫자
 	 * @param maxNum 마지막 숫자
+	 * @param isMainCalculate 메인 계산인지, 서브 계산인지의 여부
 	 * @return 모든 숫자의 합
 	 */
-	public int calculate(int minNum, int maxNum) {
+	public int calculate(int minNum, int maxNum, boolean isMainCalculate) {
 		int result = 0;
 		for (int i = minNum; i <= maxNum; i++) {
-			result += sum(minNum, i);
-		}
-		return result;
-	}
-
-	/**
-	 * 시작 숫자부터 끝 숫자까지의 모든 합을 구한다.
-	 * @param start 시작 숫자
-	 * @param end 마지막 숫자
-	 * @return 시작 숫자부터 마지막 숫자까지의 모든 숫자의 합
-	 */
-	public int sum(int start, int end) {
-		int result = 0;
-		for (int i = start; i <= end; i++) {
-			result += i;
+			int value = i;
+			if (isMainCalculate) {
+				value = calculate(minNum, i, false);
+			}
+			result += value;
 		}
 		return result;
 	}
