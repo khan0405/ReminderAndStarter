@@ -8,6 +8,7 @@ public class Recursion {
 		
 		System.out.println("3 factorial : " + doNotRecursion(3));
 		System.out.println("12 factorial : " + doNotRecursion(12));
+	
 	}
 	
 	private static int factorial(int n) {
