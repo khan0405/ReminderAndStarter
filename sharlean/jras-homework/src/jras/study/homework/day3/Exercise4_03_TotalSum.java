@@ -1,4 +1,4 @@
-package study.day3;
+package jras.study.homework.day3;
 
 public class Exercise4_03_TotalSum {
 

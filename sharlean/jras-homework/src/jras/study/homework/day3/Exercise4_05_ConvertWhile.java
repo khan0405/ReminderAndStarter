@@ -1,5 +1,5 @@
-package study.day3;
- 
+package jras.study.homework.day3;
+
 public class Exercise4_05_ConvertWhile {
 	public static void main(String[] args) {
 		//예제 코드.

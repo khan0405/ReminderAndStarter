@@ -1,10 +1,9 @@
-package study.day3;
+package jras.study.homework.day3;
 
 import java.util.Scanner;
 
-
 public class Exercise4_14_NumberMatchingGame {
-  
+	  
 	public static void main(String[] args) {
 		// 1~100 사이의 임의의 값을 얻어서 answer에 저장한다.
 		int answer 	= (int) (Math.random() * 100 + 1);
