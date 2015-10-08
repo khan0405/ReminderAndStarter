@@ -20,6 +20,10 @@ public class Exercise6_25 {
 	}
 }
 
+/**
+ * 카드 덱 클래스
+ * 카드를 섞거나 정렬하거나 분배 및 반환을 할 수 있다.
+ */
 class CardDeck implements Iterable<Card> {
 	private static final int MIN_CARD_VALUE = 1;
 	private static final int MAX_CARD_VALUE = 13;
@@ -30,6 +34,9 @@ class CardDeck implements Iterable<Card> {
 		initializeDeck();
 	}
 
+	/**
+	 * 카드 정보 생성
+	 */
 	private void initializeDeck() {
 		cards = new ArrayList<>();
 		for (int cardNumber = 0; cardNumber < MAX_CARD_VALUE; cardNumber++) {
@@ -39,18 +46,34 @@ class CardDeck implements Iterable<Card> {
 		}
 	}
 
+	/**
+	 * 카드를 무작위로 섞는다.
+	 */
 	public void suffle() {
 		Collections.shuffle(cards);
 	}
 
+	/**
+	 * 카드를 정렬한다.
+	 */
 	public void sort() {
 		Collections.sort(cards);
 	}
 
+	/**
+	 * 카드를 역순으로 정렬한다.
+	 */
 	public void reverse() {
 		Collections.reverse(cards);
 	}
 
+	/**
+	 * 카드를 거래한다.
+	 * 거래할 카드의 갯수보다 덱에 있는 카드가 적으면, 덱에 있는 카드만큼만 거래된다.
+	 *
+	 * @param cardCount 거래할 카드의 갯수
+	 * @return 거래할 카드.
+	 */
 	public List<Card> dealCards(int cardCount) {
 		List<Card> resultCards = new ArrayList<>();
 		while(cardCount-- > 0 && cards.size() > 0) {
@@ -60,13 +83,24 @@ class CardDeck implements Iterable<Card> {
 		return resultCards;
 	}
 
+	/**
+	 * 카드를 덱에 반환한다.
+	 *
+	 * @param card 덱에 반환할 카드
+	 * @return 반환되었는지의 여부. 이미 덱에 있는 경우라면 반환되지 않는다.
+	 */
 	public boolean returnCardToCardDeck(Card card) {
 		if (cards.contains(card)) {
 			return false;
 		}
 		return cards.add(card);
 	}
-
+	/**
+	 * 카드들을 덱에 반환한다.
+	 *
+	 * @param retCards 덱에 반환할 카드들
+	 * @return 반환되었는지의 여부. 이미 덱에 있는 경우라면 반환되지 않는다.
+	 */
 	public boolean returnCardsToCardDeck(List<Card> retCards) {
 		if (cards.containsAll(retCards)) {
 			return false;
@@ -74,6 +108,9 @@ class CardDeck implements Iterable<Card> {
 		return cards.addAll(retCards);
 	}
 
+	/**
+	 * 카드 정보를 리셋한다.
+	 */
 	public void resetCards() {
 		initializeDeck();
 	}
@@ -94,13 +131,21 @@ class CardDeck implements Iterable<Card> {
 	}
 }
 
+/**
+ * 카드 클래스.
+ *
+ * 카드는 숫자 정보와 모양 정보를 가지며, 특정 숫자(1, 11, 12, 13)은 각각의 이름을 가진다.
+ */
 class Card implements Comparable<Card> {
+	// 특정 숫자의 이름
 	public static final int ACE = 1;
 	public static final int JACK = 11;
 	public static final int QUEEN = 12;
 	public static final int KING = 13;
 
+	/** 카드 숫자 */
 	private int number;
+	/** 카드 모양 */
 	private CardSuit suit;
 
 	public Card(int number, CardSuit suit) {
@@ -147,13 +192,20 @@ class Card implements Comparable<Card> {
 	}
 }
 
+/**
+ * 카드의 모양 정보
+ *
+ * 각 모양마다 순위를 가진다.
+ */
 enum CardSuit {
 	DIAMONDS(1),
 	CLUBS(2),
 	HEARTS(3),
 	SPADES(4);
 
+	/** 카드의 순위 */
 	private int order;
+
 	CardSuit(int order) {
 		this.order = order;
 	}
