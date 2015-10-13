@@ -25,7 +25,7 @@ public class Exercise4_08_class {
 		Operator[] op = { Operator.PLUS };
 		
 		//방정식 클래스 생성
-		Equation eq = new Equation(10, op, x, y);
+		Equation eq = new Equation(20, op, x, y);
 		
 		//모든 답을 찾도록 함
 		eq.answersFindAll();
@@ -213,7 +213,7 @@ class Equation {
      * @return
      */
     private String arrayInfo(int[] xyz) {
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         
         sb.append("xyz[size : " + xyz.length + "] ");
         
