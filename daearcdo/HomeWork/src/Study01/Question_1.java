@@ -1,7 +1,7 @@
 
 package Study01;
 
-public class Quesetion_1 {
+public class Question_1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
