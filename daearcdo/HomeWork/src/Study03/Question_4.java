@@ -43,10 +43,14 @@ public class Question_4 {
 			Card.add(CardNum1.get(i).toString() + " / " + Cards1.get(i).toString());
 
 		}
-
+		
+		
+		
 		for (int i = 0; i < Card.size(); i++) {
 			System.out.println(Card.get(i).toString());
 		}
+		
+		
 
 	}
 
