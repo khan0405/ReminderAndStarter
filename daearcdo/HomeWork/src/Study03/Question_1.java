@@ -11,19 +11,40 @@ public class Question_1 {
 	int eng; // 영어
 	int math; // 수학
 	
+	public Question_1(){
+		
+	}
 	
-	public int getTotal(){
+	public Question_1(String name,int ban,int no,int kor,int eng, int math){
+		
+		this.name = name;
+		this.ban = ban;
+		this.no = no;
+		this.kor = kor;
+		this.eng = eng;
+		this.math = math;
+		
+				
+		
+	}
+	
+	public void info(){
+		
+		System.out.println(name +"," +ban +"," + no +"," +kor+"," +eng+"," +math );
+	}
+	
+	public float getTotal(){
 		
 		
 		
-		return kor + eng + math;
+		return (float) kor + eng + math;
 	}
 	
 	public float getAverage(){
 		
-		float sum = (kor + eng + math) / 3;
+		float sum = (float) (kor + eng + math) / 3f;
 		
-		return Math.round((sum*100)/100.0);
+		return Math.round((sum*10))/10f;
 	}
 	
 	public void info(String name, int ban, int no, int kor, int eng, int math){

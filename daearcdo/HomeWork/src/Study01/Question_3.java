@@ -16,7 +16,6 @@ public class Question_3 {
 			a++;
 		}
 		System.out.println("====종료====");
-
 		// 경계선
 
 		System.out.println("===두번째 별====");

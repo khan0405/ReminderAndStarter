@@ -13,19 +13,9 @@ public static void main(String[] args) {
 		sum = (2*x+4*y);
 		if(sum == 10){
 			System.out.println("x의 값은: "+x + " / " + "y의 값은 : " + y);
-			
 		}
-		
-		
-		
-		
 	}
-	
 	x++;
-	
 }
-			
-			
-	
 }
 }

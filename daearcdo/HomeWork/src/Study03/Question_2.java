@@ -16,7 +16,6 @@ public class Question_2 {
 		System.out.println("이름 : " +Student.name);
 		System.out.println("총점 : " + Student.getTotal());
 		System.out.println("평균 : " + Student.getAverage());
-	   System.out.println(236/3);
 		
 	}
 }
