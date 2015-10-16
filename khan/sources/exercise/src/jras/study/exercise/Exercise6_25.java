@@ -16,7 +16,11 @@ public class Exercise6_25 {
 		CardDeck deck = new CardDeck();
 		deck.suffle();
 		List<Card> cards1 = deck.dealCards(3);
+		List<Card> cards2 = deck.dealCards(3);
+		List<Card> cards3 = deck.dealCards(3);
 		System.out.printf("cards1: %s \n", cards1);
+		System.out.printf("cards2: %s \n", cards2);
+		System.out.printf("cards3: %s \n", cards3);
 	}
 }
 
@@ -198,6 +202,7 @@ class Card implements Comparable<Card> {
  * 각 모양마다 순위를 가진다.
  */
 enum CardSuit {
+
 	DIAMONDS(1),
 	CLUBS(2),
 	HEARTS(3),
@@ -210,7 +215,7 @@ enum CardSuit {
 		this.order = order;
 	}
 
-	public static CardSuit valueOf(int order) throws IllegalArgumentException {
+	public static CardSuit valueOf(int order) {
 		switch (order) {
 			case 1: return DIAMONDS;
 			case 2: return CLUBS;
