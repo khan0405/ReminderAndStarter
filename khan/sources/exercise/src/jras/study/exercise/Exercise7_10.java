@@ -7,7 +7,7 @@ package jras.study.exercise;
  *
  * Created by KHAN on 2015-10-17.
  */
-class MyTv2 {
+class MyTv {
 	private boolean isPowerOn;
 	private int channel;
 	private int volume;
@@ -45,7 +45,7 @@ class MyTv2 {
 }
 public class Exercise7_10 {
 	public static void main(String[] args) {
-		MyTv2 t = new MyTv2();
+		MyTv t = new MyTv();
 		t.setChannel(10);
 		System.out.println("CH:"+t.getChannel());
 		t.setVolume(20);
